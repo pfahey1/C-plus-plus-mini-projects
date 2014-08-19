@@ -1,0 +1,95 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: 
+Date: Fri, 2 Sep 2011 13:14:09 -0400
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ccsnh.blackboard.com/@@/15F5B5C057A2BC89C7B50CDCD2BEB2D6/courses/1/CPTN_230_AN_19445_201210/content/_2792763_1/CPTN230A1application.cpp
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>><HTML><HEAD>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3D"Content-Type">
+<META name=3D"GENERATOR" content=3D"MSHTML 9.00.8112.16430"></HEAD>
+<BODY><PRE>//=0A=
+//=0A=
+//  This is the CPTN230 A1 Application Source Code File=0A=
+//=0A=
+//  Hal Bettle=0A=
+//  30 August 2008=0A=
+//=0A=
+//=0A=
+=0A=
+#include &lt;iostream&gt;=0A=
+#include &lt;iomanip&gt;=0A=
+using namespace std;=0A=
+=0A=
+#include "CPTN230A1class.h"=0A=
+=0A=
+int calculate_results(Numbers *);=0A=
+=0A=
+int main(int argc, char *argv[])=0A=
+{=0A=
+	int j =3D MAX_SIZE,=0A=
+		k =3D 0;=0A=
+	=0A=
+	Numbers my_numbers;=0A=
+=0A=
+	Numbers *the_numbers =3D &amp;my_numbers;=0A=
+=0A=
+	cout &lt;&lt; "Welcome to the CPTN230 Assignment 1 Application.\n" =
+&lt;&lt; endl;=0A=
+=0A=
+	cout &lt;&lt; "Please enter "=0A=
+		 &lt;&lt; j =0A=
+		 &lt;&lt; " integers at the prompt"=0A=
+		 &lt;&lt; endl=0A=
+		 &lt;&lt; "and end each one by pressing the \"Enter\" key." =0A=
+		 &lt;&lt; endl;=0A=
+=0A=
+	j =3D 0;=0A=
+	while (j &lt; MAX_SIZE)=0A=
+	{=0A=
+		cout &lt;&lt; "Enter Integer " &lt;&lt; j + 1 &lt;&lt; ": " &lt;&lt; =
+flush;=0A=
+		cin &gt;&gt; k;=0A=
+		my_numbers.Set_an_int(j, k);=0A=
+		j++;=0A=
+	}=0A=
+=0A=
+	cout &lt;&lt; endl;=0A=
+=0A=
+	my_numbers.Display_the_numbers();=0A=
+=0A=
+    cout &lt;&lt; "The 3rd number was " =0A=
+		 &lt;&lt; my_numbers.Get_an_int(2) =0A=
+		 &lt;&lt; '.' =0A=
+		 &lt;&lt; endl=0A=
+		 &lt;&lt; endl;=0A=
+=0A=
+	if ( calculate_results(the_numbers) )=0A=
+	{=0A=
+		my_numbers.Display_the_results();=0A=
+	}=0A=
+	else=0A=
+	{=0A=
+		cout &lt;&lt; "Error in call to calculate_results." &lt;&lt; endl;=0A=
+		exit(1);=0A=
+	}=0A=
+=0A=
+	cout &lt;&lt; endl;=0A=
+=0A=
+	cout &lt;&lt; "Thank you for using the CPTN230 Assignment 1 =
+Application." &lt;&lt; endl;=0A=
+=0A=
+	return 0;=0A=
+}=0A=
+=0A=
+int calculate_results(Numbers *generate_results)=0A=
+{=0A=
+	generate_results-&gt;Do_the_math();=0A=
+	return 1;=0A=
+}=0A=
+</PRE></BODY></HTML>

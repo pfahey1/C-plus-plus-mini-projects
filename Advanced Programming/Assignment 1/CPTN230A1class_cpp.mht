@@ -1,0 +1,91 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: 
+Date: Fri, 2 Sep 2011 13:15:15 -0400
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ccsnh.blackboard.com/@@/15F5B5C057A2BC89C7B50CDCD2BEB2D6/courses/1/CPTN_230_AN_19445_201210/content/_2792763_1/CPTN230A1class.cpp
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.17609
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>><HTML><HEAD>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3D"Content-Type">
+<META name=3D"GENERATOR" content=3D"MSHTML 9.00.8112.16430"></HEAD>
+<BODY><PRE>//=0A=
+//  This is the CPTN230 A1 Class Source Code File=0A=
+//=0A=
+//  Hal Bettle=0A=
+//  30 August 2008=0A=
+//=0A=
+//=0A=
+=0A=
+#include "CPTN230A1class.h"=0A=
+=0A=
+Numbers::Numbers()=0A=
+{=0A=
+	int i;=0A=
+	total =3D 0;=0A=
+	average =3D 0;=0A=
+	for (i =3D 0; i &lt; 5; i++)=0A=
+	{=0A=
+		nums[i] =3D 0;=0A=
+	}=0A=
+}=0A=
+=0A=
+void Numbers::Display_the_numbers(void)=0A=
+{=0A=
+	for(int k =3D 0; k &lt; MAX_SIZE; k++)=0A=
+	{=0A=
+		cout &lt;&lt; "Number " &lt;&lt; k + 1 &lt;&lt; " is " &lt;&lt; =
+nums[k] &lt;&lt; '.' &lt;&lt; endl;=0A=
+	}=0A=
+	return;=0A=
+}=0A=
+		=0A=
+int Numbers::Get_an_int(int location)=0A=
+{=0A=
+	return nums[location];=0A=
+}=0A=
+=0A=
+void Numbers::Set_an_int(int location, int value)=0A=
+{=0A=
+	nums[location] =3D value;=0A=
+	return;=0A=
+}=0A=
+=0A=
+void Numbers::Do_the_math(void)=0A=
+{=0A=
+	total =3D 0;=0A=
+	for(int k =3D 0; k &lt; MAX_SIZE; k++)=0A=
+	{=0A=
+		total =3D total + nums[k];=0A=
+	}=0A=
+	average =3D (double) total / MAX_SIZE;=0A=
+	return;=0A=
+}=0A=
+=0A=
+void Numbers::Display_the_results(void)=0A=
+{=0A=
+	cout &lt;&lt; "The total is " =0A=
+		 &lt;&lt; total =0A=
+		 &lt;&lt; " and the average is "=0A=
+		 &lt;&lt; flush;=0A=
+	if (total &gt; 99999)=0A=
+		cout.precision(7);=0A=
+	if (total &gt; 9999)=0A=
+		cout.precision(6);=0A=
+	else if (total &gt; 999)=0A=
+		cout.precision(5);=0A=
+	else if (total &gt; 99)=0A=
+		cout.precision(4);=0A=
+	else=0A=
+		cout.precision(3);=0A=
+	cout &lt;&lt; showpoint=0A=
+		 &lt;&lt; average=0A=
+		 &lt;&lt; '.'=0A=
+		 &lt;&lt; endl;=0A=
+	return;=0A=
+}=0A=
+</PRE></BODY></HTML>

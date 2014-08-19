@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0135)https://ccsnh.blackboard.com/@@/15F5B5C057A2BC89C7B50CDCD2BEB2D6/courses/1/CPTN_230_AN_19445_201210/content/_2792763_1/CPTN230A1class.h -->
+<!DOCTYPE HTML>><HTML><HEAD>
+<META content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<META name="GENERATOR" content="MSHTML 9.00.8112.16430"></HEAD>
+<BODY><PRE>//
+//  This is the CPTN230 A1 Class Header File
+//
+//  Hal Bettle
+//  30 August 2008
+//
+//
+
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+#define MAX_SIZE 5
+
+class Numbers
+{
+private:
+
+	int nums[MAX_SIZE];
+	int total;
+	double average;
+
+public:
+
+	Numbers();
+	void Display_the_numbers(void);
+	void Set_an_int(int, int);
+	int  Get_an_int(int);
+	void Do_the_math(void);
+	void Display_the_results(void);
+};</PRE></BODY></HTML>
